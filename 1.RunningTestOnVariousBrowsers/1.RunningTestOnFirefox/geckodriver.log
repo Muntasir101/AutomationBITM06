@@ -61,3 +61,25 @@ console.warn: services.settings: main/query-stripping Signature verified failed.
 console.error: services.settings: 
   main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
 1653717748058	Marionette	INFO	Stopped listening on port 53231
+1653718974542	geckodriver	INFO	Listening on 127.0.0.1:53545
+1653718977649	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53546" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileudoTKb"
+1653718978104	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Asus\\AppData\\Local\\Temp\\rust_mozprofileudoTKb\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53546/devtools/browser/9ca995d1-6949-4dc1-881d-f4e6181d2b08
+1653718980156	Marionette	INFO	Listening on port 53564
+Read port: 53564
+1653718980214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1653719027145	Marionette	INFO	Stopped listening on port 53564
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
