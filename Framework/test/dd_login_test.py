@@ -25,11 +25,20 @@ class LoginTest(unittest.TestCase):
 
         number_of_rows = excel_utils.get_row_count(data_file, sheet_name)
 
-        for r in range(1, number_of_rows + 1):
+        for r in range(2, number_of_rows + 1):
             email = excel_utils.read_data(data_file, sheet_name, r, 1)
             password = excel_utils.read_data(data_file, sheet_name, r, 2)
 
             lp = LoginPage(driver)
             lp.login_orange(email, password)
+
+            if driver.current_url == 'https://opensource-demo.orangehrmlive.com/index.php/dashboard2':
+                excel_utils.write_data(data_file, sheet_name, r, 4, "Login Success")
+
+            else:
+                excel_utils.write_data(data_file, sheet_name, r, 4, "Not Login")
+
+                # Screenshot
+                driver.save_screenshot("E:\\Offline_Batch_06\\Projects\\AutomationBITM06\\Framework\\bugs_screenshot\\login_bug.png")
 
         driver.close()
