@@ -9,13 +9,30 @@ from Framework.pages.login_page import LoginPage
 
 
 class LoginTest(unittest.TestCase):
-    def test_invalid_login(self):
-        base_url = 'https://opensource-demo.orangehrmlive.com/'
+
+    @pytest.mark.skip
+    def test_valid_login(self):
+        baseURL = "https://opensource-demo.orangehrmlive.com/"
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
         driver.maximize_window()
-        driver.get(base_url)
+        driver.implicitly_wait(3)
+        driver.get(baseURL)
+        time.sleep(3)
 
-        login_page_obj = LoginPage(driver)
-        login_page_obj.login('admin12', '12345')
+        lp = LoginPage(driver)
+        lp.login_orange("Admin", "admin123")
+
+        driver.close()
+
+    def test_Invalid_login(self):
+        baseURL = "https://opensource-demo.orangehrmlive.com/"
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        driver.maximize_window()
+        driver.implicitly_wait(3)
+        driver.get(baseURL)
+        time.sleep(3)
+
+        lp = LoginPage(driver)
+        lp.login_orange("Admin213123", "admin123232")
 
         driver.close()
