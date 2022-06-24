@@ -32,7 +32,7 @@ class LoginTest(unittest.TestCase):
             lp = LoginPage(driver)
             lp.login_orange(email, password)
 
-            if driver.current_url == 'https://opensource-demo.orangehrmlive.com/index.php/dashboard2':
+            if driver.current_url == 'https://opensource-demo.orangehrmlive.com/index.php/dashboard':
                 excel_utils.write_data(data_file, sheet_name, r, 4, "Login Success")
 
             else:
