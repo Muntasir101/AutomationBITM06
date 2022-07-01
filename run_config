@@ -1,0 +1,5 @@
+Allure:
+python -m pytest --alluredir="E:\Offline_Batch_06\Projects\AutomationBITM06\AllureReports\login_report" .\Framework\test\login_test.py
+
+open command:
+allure serve E:\Offline_Batch_06\Projects\AutomationBITM06\AllureReports\login_report
